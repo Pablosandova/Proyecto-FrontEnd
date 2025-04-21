@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #2c2a2a;">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">FutuProyect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="../paginas/index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../paginas/nosotros.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../paginas/experiencia.html">Experiencias</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../paginas/registro.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- FIN NAVBAR -->
+
+    <!-- FORMULARIO -->
+    <div class="container mt-5">
+        <form class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombre" required>
+                <div class="invalid-feedback">Por favor, ingrese su nombre completo.</div>
+            </div>
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="correo" required>
+                <div class="invalid-feedback">Por favor, ingrese un correo válido.</div>
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" required>
+                <div class="invalid-feedback">Por favor, ingrese su número de teléfono.</div>
+            </div>
+            <div class="mb-3">
+                <label for="servicio" class="form-label">Servicio Solicitado</label>
+                <select class="form-select" id="servicio" required>
+                    <option value="">Seleccione un servicio</option>
+                    <option value="software">Desarrollo de Software</option>
+                    <option value="web">Desarrollo Web</option>
+                    <option value="movil">Aplicaciones Móviles</option>
+                    <option value="consultoria">Consultoría Tecnológica</option>
+                </select>
+                <div class="invalid-feedback">Por favor, seleccione un servicio.</div>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+                <div class="invalid-feedback">Por favor, ingrese un mensaje.</div>
+            </div>
+            <button class="btn btn-primary" type="submit">Enviar</button>
+        </form>
+    </div>
+    <!-- FIN FORMULARIO -->
+
+    <!-- FOOTER -->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-5" style="background-color: #2c2a2a; color: white;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span>FutuProyect © 2025. Todos los derechos reservados.</span>
+            <ul class="nav">
+                <li class="ms-3"><a class="text-white" href="#">Twitter</a></li>
+                <li class="ms-3"><a class="text-white" href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoA6zM9KrYlIwWz5y5j3pjt6aUj9glt5MjlV+8iJOZd+N8p" crossorigin="anonymous"></script>
+    <script>
+        // Validación del formulario
+        (function () {
+            'use strict';
+            const forms = document.querySelectorAll('.needs-validation');
+            Array.from(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+    </script>
+</body>
+</html>
